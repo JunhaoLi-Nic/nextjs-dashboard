@@ -1,11 +1,12 @@
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
+import '@/app/ui/global.css'
+import { inter } from '@/app/ui/fonts';
+
+export default function RootLayout({children,}: {
+  children: React.ReactNode;  //It's one of the most common types used in React for properties and return types where any renderable content is expected.
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+   <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
